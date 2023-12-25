@@ -8,7 +8,9 @@ class RandomNumberGenerator extends Component {
   }
 
   onClickingGenerate = () => {
-    this.setState(prevState => ({count: Math.ceil(Math.random * 100)}))
+    this.setState({
+      count: Math.ceil(Math.random() * 100),
+    })
   }
 
   render() {
@@ -18,7 +20,7 @@ class RandomNumberGenerator extends Component {
         <div className="card-container">
           <h1 className="heading">Random Number</h1>
           <p className="paragraph">
-            Get a random number in the <br />
+            Generate a random number in the <br />
             range of 0 to 100
           </p>
           <button
